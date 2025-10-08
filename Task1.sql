@@ -91,12 +91,13 @@ FROM sales_orders
 GROUP BY category, region
 ORDER BY profit_margin DESC;
 
---Shipping Performce by Mode:
+--Shipping Performance by Mode:
 SELECT ship_mode,
        AVG(ship_date - order_date) AS avg_shipping_time
 FROM sales_orders
 GROUP BY ship_mode
 ORDER BY avg_shipping_time;
+
 
 
 
